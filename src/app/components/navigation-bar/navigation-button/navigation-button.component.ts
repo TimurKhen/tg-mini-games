@@ -1,10 +1,13 @@
 import {Component, computed, input} from '@angular/core';
 import {NavigationButton} from "../../../interfaces/navigation-interfaces/navigation-button";
+import {RouterLink} from "@angular/router";
 
 @Component({
   selector: 'navigation-button',
   standalone: true,
-  imports: [],
+  imports: [
+    RouterLink
+  ],
   templateUrl: './navigation-button.component.html',
   styleUrl: './navigation-button.component.sass'
 })

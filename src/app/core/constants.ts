@@ -2,7 +2,7 @@ import {NavigationButton} from "../interfaces/navigation-interfaces/navigation-b
 
 export const const_navigation_objects: NavigationButton[] = [
   {
-    name: 'friends',
+    name: 'people',
     icon: 'people',
   },
   {

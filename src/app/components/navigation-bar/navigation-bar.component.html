@@ -1,5 +1,8 @@
 <div class="navigation">
-  @for (item of navigationPages(); track item) {
-    <navigation-button [buttonName]="item"></navigation-button>
+  @for (item of navigationPages(); track $index) {
+    <navigation-button [buttonName]="item"
+                       (click)="setIndex($index)"
+                       [ngClass]="{'active': $index == currentIndex, 'inactive': $index != currentIndex}"
+    ></navigation-button>
   }
 </div>
