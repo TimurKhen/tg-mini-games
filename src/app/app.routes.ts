@@ -8,11 +8,10 @@ export const routes: Routes = [
   {
     path: 'home',
     component: HomeComponent,
-    children: [
-      {
-        path: 'tictactoe', component: TicTacToeComponent
-      }
-    ]
+  },
+  {
+    path: 'home/tictactoe',
+    component: TicTacToeComponent
   },
   {
     path: 'settings',
@@ -21,5 +20,10 @@ export const routes: Routes = [
   {
     path: 'people',
     component: PeopleComponent,
+  },
+  {
+    path: '',
+    pathMatch: 'full',
+    redirectTo: 'home'
   }
 ];

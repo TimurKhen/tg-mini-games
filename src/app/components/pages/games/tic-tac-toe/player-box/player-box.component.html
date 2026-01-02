@@ -1,0 +1,10 @@
+<span class="box">
+  @if (currentIcon() == '') {
+    <div class="contentBox">
+
+    </div>
+<!--    <img [src]="'gamePictures/x.svg'" width="50">-->
+  } @else {
+    <img [src]="'gamePictures/' + currentIcon() + '.svg'" width="50">
+  }
+</span>

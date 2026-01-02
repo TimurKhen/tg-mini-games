@@ -1,1 +1,26 @@
-<p>tic-tac-toe works!</p>
+<div class="game">
+  <div class="tictactoe">
+    @for (itemList of playerBoxes; let listIndex = $index; track itemList) {
+      <div class="itemList">
+        @for (item of itemList; let itemIndex = $index; track item) {
+          <player-box [currentIcon]="item" (click)="boxClick(listIndex, itemIndex)"></player-box>
+        }
+      </div>
+    }
+  </div>
+  @if (winner != '') {
+    <span class="winnerMessage">
+      <h1>Выйграл: {{ winner }}</h1>
+      <button (click)="setUpGame()">Играть снова</button>
+    </span>
+  }
+  @if (isDraw) {
+    <span class="winnerMessage">
+      <h1>Ничья!</h1>
+      <button (click)="setUpGame()">Играть снова</button>
+    </span>
+  }
+  <span class="information">
+    <h1>Крестики-нолики</h1>
+  </span>
+</div>

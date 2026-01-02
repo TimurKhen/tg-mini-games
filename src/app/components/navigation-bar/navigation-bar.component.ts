@@ -16,7 +16,7 @@ import {NgClass} from "@angular/common";
 export class NavigationBarComponent {
   navigationPages = input.required<NavigationButton[]>()
 
-  currentIndex = 0
+  currentIndex = 1
 
   setIndex(index: number) {
     this.currentIndex = index

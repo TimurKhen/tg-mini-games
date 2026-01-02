@@ -1,0 +1,6 @@
+<a class="preview" routerLink="{{previewData().name}}">
+  <span class="information">
+    <h1>{{ previewData().translation }}</h1>
+  </span>
+  <img [src]="'homePictures/' + previewData().icon + '.svg'" width="100">
+</a>
