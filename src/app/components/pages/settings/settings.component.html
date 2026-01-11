@@ -1,1 +1,8 @@
-<p>settings works!</p>
+<div class="settings">
+  <h1>Настройки</h1>
+
+  <form>
+    <label for="usernameInput"></label>
+    <t-input id="usernameInput" [inputValue]="'nick'" (outputValue)="userValue.set($event)"></t-input>
+  </form>
+</div>
